@@ -5,7 +5,7 @@ const SubscribePopup = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your logic for handling the subscription here
+    // Add logic for handling the subscription here
     console.log("Subscribed with email:", email);
     // Close the popup
     onClose();
@@ -50,26 +50,9 @@ const SubscribePopup = ({ isOpen, onClose }) => {
 export default SubscribePopup;
 
 
-// write this in button place
-// import React, { useState } from "react";
-// import SubscribePopup from "./SubscribePopup";
 
-// function App() {
-//   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-//   const togglePopup = () => {
-//     setIsPopupOpen(!isPopupOpen);
-//   };
+  
 
-//   return (
-//     <div className="App">
-//       <h1>Welcome to My Website</h1>
-//       <button onClick={togglePopup} className="bg-blue-500 text-white py-2 px-4 rounded-md mt-4">
-//         Open Subscribe Popup
-//       </button>
-//       <SubscribePopup isOpen={isPopupOpen} onClose={togglePopup} />
-//     </div>
-//   );
-// }
+  
 
-// export default App;

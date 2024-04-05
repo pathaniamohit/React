@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{ useState }from "react";
 // import Nav from "./Navbar/Nav";
 import HeroImg from "../assets/Hero.png";
 import ButtonFill from "./ButtonFill";
@@ -7,6 +7,8 @@ import Icon1 from "../assets/icon-1.png";
 import Icon2 from "../assets/icon-2.png";
 import Icon3 from "../assets/icon-3.png";
 // import Video from './Video/Video.jsx';
+import SubscribePopup from "./SubscribePopup";
+
 import './Header.css';
 const Header = () => {
   /**
@@ -33,6 +35,12 @@ const Header = () => {
     },
   ];
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   // const handleClick = () => {
   //   window.open("/login.html", "_self");
   // };
@@ -53,7 +61,8 @@ const Header = () => {
           </p>
           <br />
           <div className="flex md:gap-4 gap-2 flex-wrap">
-          <ButtonFill >Subscribe us!</ButtonFill>
+          <ButtonFill onClick={togglePopup} >Subscribe us!</ButtonFill>
+          <SubscribePopup isOpen={isPopupOpen} onClose={togglePopup} />
           <ButtonOutline />
           </div>
         </div>
