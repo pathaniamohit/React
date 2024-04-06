@@ -6,7 +6,7 @@ const video1 = require('./video1.mp4');
 const video2 = require('./video2.mp4'); 
 const video3 = require('./video3.mp4');
 
-const VIDEOS = [video3];
+const VIDEOS = [video1, video2, video3];
 
 const getRandomVideo = () => {
   return VIDEOS[Math.floor(Math.random() * VIDEOS.length)];
